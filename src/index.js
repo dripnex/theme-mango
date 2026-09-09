@@ -1,0 +1,59 @@
+/**
+ * Mango — satellite Dripnex theme.
+ * Token layer only. Same contract as a community theme repo.
+ * Must be CommonJS.
+ *
+ * Good vibes mango light, warm fruit paper and coral-orange accent.
+ */
+
+const TOKENS = {
+  '--bg-base': '#fff4e4',
+  '--bg-surface': '#ffe8c5',
+  '--bg-elevated': '#fffcf9',
+  '--bg-inset': '#ffdfb1',
+  '--bg-hover': 'rgba(58, 40, 20, 0.05)',
+  '--bg-active': 'rgba(58, 40, 20, 0.09)',
+  '--text-primary': '#3a2814',
+  '--text-secondary': 'rgba(58, 40, 20, 0.74)',
+  '--text-muted': 'rgba(58, 40, 20, 0.52)',
+  '--text-faint': 'rgba(58, 40, 20, 0.34)',
+  '--border': 'rgba(58, 40, 20, 0.12)',
+  '--border-subtle': 'rgba(58, 40, 20, 0.07)',
+  '--border-strong': 'rgba(58, 40, 20, 0.18)',
+  '--accent': '#f08a28',
+  '--accent-hover': '#d37923',
+  '--accent-muted': 'rgba(240, 138, 40, 0.2)',
+  '--accent-subtle': 'rgba(240, 138, 40, 0.1)',
+  '--glass-bg': 'rgba(255, 244, 228, 0.92)',
+  '--glass-border': 'rgba(58, 40, 20, 0.1)',
+  '--glass-bg-menu': 'rgba(255, 252, 249, 0.96)',
+  '--glass-border-menu': 'rgba(58, 40, 20, 0.1)',
+  '--status-active': '#f08a28',
+  '--status-on-hold': '#d4a04a',
+  '--status-completed': '#5a9a62',
+  '--status-dropped': '#c45a5a',
+};
+
+module.exports = {
+  id: 'theme-mango',
+  name: 'Mango',
+  version: '0.1.0',
+  description: 'Good vibes mango. Warm fruit paper.',
+
+  activate(context) {
+    const remove = context.registerTheme({
+      id: 'dripnex-mango',
+      name: 'Mango',
+      description: 'Good vibes mango. Warm fruit paper.',
+      author: 'Dripnex',
+      colorScheme: 'light',
+      tokens: TOKENS,
+    });
+
+    return {
+      dispose() {
+        remove();
+      },
+    };
+  },
+};
