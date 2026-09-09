@@ -1,0 +1,7 @@
+{
+  "id": "theme-mango",
+  "name": "Mango",
+  "version": "0.1.0",
+  "description": "Good vibes mango. Warm fruit paper.",
+  "main": "dist/index.js"
+}
